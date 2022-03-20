@@ -1,0 +1,13 @@
+:toc: auto
+:stylesheet: spring.css
+:doctype: book
+:toc-title: Table of content
+toc::[]
+
+= Activity Streams 2.0 reference implementation for Java
+
+This implementation is based on https://www.w3.org/TR/activitystreams-core/[W3C reference].
+
+== Limitations
+
+This implementation is based on jdk 17 and is not planned to be ported to older JDK platforms.
