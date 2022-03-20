@@ -3,7 +3,6 @@ package it.petrovich.model.extended;
 import it.petrovich.model.core.Activity;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 /**

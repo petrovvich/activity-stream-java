@@ -2,7 +2,7 @@ package it.petrovich.model.interfaces;
 
 public interface Contextual {
 
-  Object getContext();
+  Object getGlobalContext();
 
-  void setContext(Object context);
+  void setGlobalContext(Object context);
 }
