@@ -216,7 +216,7 @@ public class BaseObject implements Contextual, Typed, Identifiable, Named {
      * <br>
      * Possible values are: {@link Collection}
      */
-    protected Collection<?> replies;
+    protected Object replies;
 
     /**
      * Refer to <a href="https://www.w3.org/ns/activitystreams#startTime">startTime definition</a>.
