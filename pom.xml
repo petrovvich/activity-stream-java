@@ -1,23 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>it.petrovich</groupId>
-    <artifactId>activity-stream-java-parent</artifactId>
+    <artifactId>activity-streams-java-parent</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
+    <url>https://github.com/petrovvich/activity-stream-java</url>
+    <description>Activity Streams 2.0 reference implementation for Java.</description>
+    <inceptionYear>2022</inceptionYear>
+
+    <developers>
+        <developer>
+            <id>petrovvich</id>
+            <name>Alexander Romanyuk</name>
+            <email>alexromantrue@gmail.com</email>
+            <organization>Software Cats</organization>
+            <organizationUrl>https://softwarecats.dev</organizationUrl>
+            <roles>
+                <role>owner</role>
+                <role>developer</role>
+            </roles>
+            <timezone>+7</timezone>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Software Cats</name>
+        <url>https://softwarecats.dev</url>
+    </organization>
+
+    <scm>
+        <developerConnection>scm:https://github.com/petrovvich/activity-stream-java.git
+        </developerConnection>
+        <url>https://github.com/petrovvich/activity-stream-java</url>
+    </scm>
+
+    <issueManagement>
+        <url>https://github.com/petrovvich/activity-stream-java/issues</url>
+    </issueManagement>
 
     <modules>
-        <module>activity-stream-model</module>
+        <module>activity-streams-model</module>
     </modules>
 
     <properties>
+        <lombok.version>1.18.22</lombok.version>
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.targetEncoding>UTF-8</project.build.targetEncoding>
     </properties>
 
-    <dependencies></dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -32,7 +84,8 @@
                         <compilerArg>--add-exports=java.base/jdk.internal.ref=ALL-UNNAMED</compilerArg>
                         <compilerArg>--add-exports=java.base/sun.nio.ch=ALL-UNNAMED</compilerArg>
                         <compilerArg>--add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED</compilerArg>
-                        <compilerArg>--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</compilerArg>
+                        <compilerArg>--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+                        </compilerArg>
                         <compilerArg>--add-opens=jdk.compiler/com.sun.tools.javac=ALL-UNNAMED</compilerArg>
                         <compilerArg>--add-opens=java.base/java.lang=ALL-UNNAMED</compilerArg>
                         <compilerArg>--add-opens=java.base/java.lang.reflect=ALL-UNNAMED</compilerArg>
@@ -67,14 +120,15 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <argLine>--add-exports=java.base/jdk.internal.ref=ALL-UNNAMED
-            --add-exports=java.base/sun.nio.ch=ALL-UNNAMED
-            --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED
-            --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
-            --add-opens=jdk.compiler/com.sun.tools.javac=ALL-UNNAMED
-            --add-opens=java.base/java.lang=ALL-UNNAMED
-            --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
-            --add-opens=java.base/java.io=ALL-UNNAMED
-            --add-opens=java.base/java.util=ALL-UNNAMED</argLine>
+                        --add-exports=java.base/sun.nio.ch=ALL-UNNAMED
+                        --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED
+                        --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED
+                        --add-opens=jdk.compiler/com.sun.tools.javac=ALL-UNNAMED
+                        --add-opens=java.base/java.lang=ALL-UNNAMED
+                        --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+                        --add-opens=java.base/java.io=ALL-UNNAMED
+                        --add-opens=java.base/java.util=ALL-UNNAMED
+                    </argLine>
                 </configuration>
             </plugin>
         </plugins>
